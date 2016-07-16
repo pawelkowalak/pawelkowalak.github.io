@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey Patching &middot; Monkey Patching</title>
+
+    <meta name="description" content="Pawel Kowalak">
+
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Monkey Patching &middot; Monkey Patching">
+    <meta name="twitter:description" content="Pawel Kowalak">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Monkey Patching &middot; Monkey Patching">
+    <meta property="og:description" content="Pawel Kowalak">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://www.monkeypatching.com//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Monkey Patching" href="http://www.monkeypatching.com//index.xml" />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://www.monkeypatching.com/">Monkey Patching</a></h1>
+            <h2 class="brand-tagline"> Pawel Kowalak </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/pawelkowalak"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/viru "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://www.monkeypatching.com//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">16 Jul 2016, 13:54</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://www.monkeypatching.com/post/initial-commit/" class="post-title">Git Messages Again</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>When started this blog I was wondering what should be in the first post? Then I thought: what is a typical commit message of the first commit in a new repository? 90% of the times it says &ldquo;Initial commit&rdquo;. Well, starting a blog with &ldquo;Initial Post&rdquo; would be silly, so let&rsquo;s talk about commit messages instead! What&rsquo;s more, let&rsquo;s talk about later commits, because initial commit usually doesn&rsquo;t really matter.</p>
+
+<p>There are plenty of <a href="http://chris.beams.io/posts/git-commit/">good blog posts</a> <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">about writing good commit messages</a> already. I&rsquo;ll just recap in short (but if it&rsquo;s new to you, please check out the posts I&rsquo;ve linked):</p>
+
+<ol>
+<li>Subject, blank line, body format.</li>
+<li>Limit subject to 50 characters, leave the period out.</li>
+<li>Use imperative mood in subject.</li>
+<li>Wrap the body at 72th column.</li>
+<li>In the body explain why, not how did you change something.</li>
+</ol>
+
+<p>What&rsquo;s really important is to understand why it all matters? Why bother with lack of period at the end of subject? Why bother with explaining why I fixed this simple bug, when the code is self explanatory? Nowadays teams and projects are getting bigger and bigger. If we compare <a href="http://www.informationisbeautiful.net/visualizations/million-lines-of-code/">lines of code</a> from the past it&rsquo;s obvious that projects are getting bigger and more developers work on them. And the bigger the team is, the more difficult it is to maintain the code. When the team is scaling out it is more important for the developers to be good collaborators. And you can tell if a developer is good collaborator by looking at his/her commit messages.</p>
+
+<p>Another important factor is that software deployment is tightly linked with SCM tools and workflows. It is popular to push on green (deploy from whatever commit in master that passed all tests) or use <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a>.</p>
+
+<p>In the first scenario your software is deployed automatically by CI when all tests pass, so you might ask &ldquo;why bother about commit messages?&rdquo;. Well, if tests don&rsquo;t catch a bug that got deployed to production, then you need to rollback. Good commit history will help you to identify where the problem might be. And in situations when you have to rollback your production, you don&rsquo;t want to analyze the code, because minutes or even seconds matter. You want to identify where the problem is as soon as possible.</p>
+
+<p>If you&rsquo;re using git flow branching model, then it is also important to have clean commit history with good messages, because you rely on that information when creating release branches, cherry-picking fixes, etc. Would you be confident deploying release branch with &ldquo;important fix&rdquo; commit without any more details?</p>
+
+<p>Of course good commit messages is only one thing that helps with maintenance of big project and big team. There are other factors as keeping feature branches up to date using rebase, keeping clean history squashing minor commits, or splitting huge changes into multiple independent commits. More on that on this blog soon!</p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="http://www.monkeypatching.com//js/all.min.js"></script>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80579269-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

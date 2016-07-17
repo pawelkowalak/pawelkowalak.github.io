@@ -76,6 +76,10 @@
                         <p class="post-meta">
                             
                             
+                                under 
+                                
+                                <a class="post-category post-category-git" href="http://www.monkeypatching.com//categories/git">git</a>
+                            
                         </p>
                     </header>
                     
@@ -90,7 +94,7 @@
                     </div>
                     
                     <div class="post-description">
-                        <p>When started this blog I was wondering what should be in the first post? Then I thought: what is a typical commit message of a first commit in a new repository? 90% of the times it says &ldquo;Initial commit&rdquo;. Well, starting a blog with &ldquo;Initial Post&rdquo; would be silly, so let&rsquo;s talk about commit messages instead! What&rsquo;s more, let&rsquo;s talk about later commits, because the first one usually doesn&rsquo;t really matter.</p>
+                        <p>When started this blog I was wondering what should be in the first post? Then I thought: what is a typical commit message of the first commit in a new repository? 90% of the times it says &ldquo;Initial commit&rdquo;. Well, starting a blog with &ldquo;Initial Post&rdquo; would be silly, so let&rsquo;s talk about commit messages instead! What&rsquo;s more, let&rsquo;s talk about later commits, because the first one usually doesn&rsquo;t really matter.</p>
 
 <p>There are plenty of <a href="http://chris.beams.io/posts/git-commit/">good blog posts</a> <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">about writing good commit messages</a> already. I&rsquo;ll just recap in short (but if it&rsquo;s new to you, please check out the posts I&rsquo;ve linked):</p>
 
@@ -104,13 +108,13 @@
 
 <p>What&rsquo;s really important is to understand why it all matters? Why bother with a lack of the period at the end of subject? Why bother with explaining why I fixed this simple bug, when the code is self explanatory? Nowadays teams and aprojects are getting bigger and bigger. If we compare <a href="http://www.informationisbeautiful.net/visualizations/million-lines-of-code/">lines of code</a> from the past it&rsquo;s obvious that projects are getting bigger and more developers work on them. And the bigger the team is, the more difficult it is to maintain the code. When the team is scaling out it is more important for developers to be good collaborators. And you can tell if a developer is a good collaborator by looking at his/her commit messages.</p>
 
-<p>Another important factor is that a software deployment is tightly linked with SCM tools and workflows. It is popular to push on green (deploy from whatever commit in a master that passed all tests) or use a <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a>.</p>
+<p>Another important factor is that a software deployment is tightly linked with SCM tools and workflows. It is popular to push on green (deploy from whatever commit in a master that passed all tests) or use <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a>.</p>
 
 <p>In the first scenario your software is deployed automatically by the CI when all the tests pass, so you might ask &ldquo;why bother about commit messages?&rdquo;. Well, if the tests don&rsquo;t catch a bug that got deployed to a production, then you need to rollback. Good commit history will help you to identify where the problem might be. And in the situations when you have to rollback your production, you don&rsquo;t want to analyze the code, because minutes or even seconds matter. You want to identify where the problem is as soon as possible.</p>
 
 <p>If you&rsquo;re using the git flow branching model, then it is also important to have a clean commit history with good messages, because you rely on that information when creating release branches, cherry-picking fixes, etc. Would you be confident deploying the release branch with an &ldquo;important fix&rdquo; commit without any more details?</p>
 
-<p>Of course good commit messages is only one thing that helps with a maintenance of a big project and a big team. There are other factors as keeping feature branches up to date using rebase, keeping a clean history by squashing minor commits, or splitting huge changes into multiple independent commits. More on that on this blog soon!</p>
+<p>Of course good commit messages is only one thing that helps with maintenance of a big project and a big team. There are other factors as keeping feature branches up to date using rebase, keeping a clean history by squashing minor commits, or splitting huge changes into multiple independent commits. More on that on this blog soon!</p>
 
                     </div>
                     <div id="disqus_thread"></div>

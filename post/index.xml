@@ -11,10 +11,10 @@
     
     <item>
       <title>Git Messages Again</title>
-      <link>http://www.monkeypatching.com/post/initial-commit/</link>
+      <link>http://www.monkeypatching.com/post/git-messages-again/</link>
       <pubDate>Sat, 16 Jul 2016 13:54:27 +0200</pubDate>
       
-      <guid>http://www.monkeypatching.com/post/initial-commit/</guid>
+      <guid>http://www.monkeypatching.com/post/git-messages-again/</guid>
       <description>&lt;p&gt;When started this blog I was wondering what should be in the first post? Then I thought: what is a typical commit message of a first commit in a new repository? 90% of the times it says &amp;ldquo;Initial commit&amp;rdquo;. Well, starting a blog with &amp;ldquo;Initial Post&amp;rdquo; would be silly, so let&amp;rsquo;s talk about commit messages instead! What&amp;rsquo;s more, let&amp;rsquo;s talk about later commits, because the first one usually doesn&amp;rsquo;t really matter.&lt;/p&gt;
 
 &lt;p&gt;There are plenty of &lt;a href=&#34;http://chris.beams.io/posts/git-commit/&#34;&gt;good blog posts&lt;/a&gt; &lt;a href=&#34;http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html&#34;&gt;about writing good commit messages&lt;/a&gt; already. I&amp;rsquo;ll just recap in short (but if it&amp;rsquo;s new to you, please check out the posts I&amp;rsquo;ve linked):&lt;/p&gt;

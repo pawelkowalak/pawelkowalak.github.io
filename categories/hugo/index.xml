@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Monkey Patching</title>
-    <link>http://www.monkeypatching.com/</link>
-    <description>Recent content on Monkey Patching</description>
+    <title>Hugo on Monkey Patching</title>
+    <link>http://www.monkeypatching.com/categories/hugo/</link>
+    <description>Recent content in Hugo on Monkey Patching</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Jul 2016 20:16:14 +0200</lastBuildDate>
-    <atom:link href="http://www.monkeypatching.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.monkeypatching.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Auto Deploy Hugo to Github Pages</title>
@@ -49,36 +49,6 @@ $ hugo -v
 &lt;p&gt;There&amp;rsquo;s one more step to make it all work&amp;hellip; CircleCI needs a write permission to the &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; repository. In order to do that, generate a new SSH key pair with &lt;code&gt;ssh-keygen&lt;/code&gt;, add the public key as a deployment key to that repository and the private key to CircleCI under &lt;code&gt;myblog&lt;/code&gt; project settings. It is called &amp;ldquo;SSH Permissions&amp;rdquo; and you should provide &lt;code&gt;github.com&lt;/code&gt; as a hostname for that key.&lt;/p&gt;
 
 &lt;p&gt;You&amp;rsquo;re all set now. Commit changes to &lt;code&gt;myblog&lt;/code&gt; repository and changes will appear on your website few minutes after. Everything based on free GitHub and CircleCI accounts!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Git Messages Again</title>
-      <link>http://www.monkeypatching.com/post/git-messages-again/</link>
-      <pubDate>Sat, 16 Jul 2016 13:54:27 +0200</pubDate>
-      
-      <guid>http://www.monkeypatching.com/post/git-messages-again/</guid>
-      <description>&lt;p&gt;When started this blog I was wondering what should be in the first post? Then I thought: what is a typical commit message of the first commit in a new repository? 90% of the times it says &amp;ldquo;Initial commit&amp;rdquo;. Well, starting a blog with &amp;ldquo;Initial Post&amp;rdquo; would be silly, so let&amp;rsquo;s talk about commit messages instead! What&amp;rsquo;s more, let&amp;rsquo;s talk about later commits, because the first one usually doesn&amp;rsquo;t really matter.&lt;/p&gt;
-
-&lt;p&gt;There are plenty of &lt;a href=&#34;http://chris.beams.io/posts/git-commit/&#34;&gt;good blog posts&lt;/a&gt; &lt;a href=&#34;http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html&#34;&gt;about writing good commit messages&lt;/a&gt; already. I&amp;rsquo;ll just recap in short (but if it&amp;rsquo;s new to you, please check out the posts I&amp;rsquo;ve linked):&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A Subject, blank line, body format.&lt;/li&gt;
-&lt;li&gt;Limit the subject to 50 characters, leave the period out.&lt;/li&gt;
-&lt;li&gt;Use an imperative mood in the subject.&lt;/li&gt;
-&lt;li&gt;Wrap the body at 72th column.&lt;/li&gt;
-&lt;li&gt;In the body explain why, not how did you change something.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;What&amp;rsquo;s really important is to understand why it all matters? Why bother with a lack of the period at the end of subject? Why bother with explaining why I fixed this simple bug, when the code is self explanatory? Nowadays teams and aprojects are getting bigger and bigger. If we compare &lt;a href=&#34;http://www.informationisbeautiful.net/visualizations/million-lines-of-code/&#34;&gt;lines of code&lt;/a&gt; from the past it&amp;rsquo;s obvious that projects are getting bigger and more developers work on them. And the bigger the team is, the more difficult it is to maintain the code. When the team is scaling out it is more important for developers to be good collaborators. And you can tell if a developer is a good collaborator by looking at his/her commit messages.&lt;/p&gt;
-
-&lt;p&gt;Another important factor is that a software deployment is tightly linked with SCM tools and workflows. It is popular to push on green (deploy from whatever commit in a master that passed all tests) or use &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;git flow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the first scenario your software is deployed automatically by the CI when all the tests pass, so you might ask &amp;ldquo;why bother about commit messages?&amp;rdquo;. Well, if the tests don&amp;rsquo;t catch a bug that got deployed to a production, then you need to rollback. Good commit history will help you to identify where the problem might be. And in the situations when you have to rollback your production, you don&amp;rsquo;t want to analyze the code, because minutes or even seconds matter. You want to identify where the problem is as soon as possible.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;rsquo;re using the git flow branching model, then it is also important to have a clean commit history with good messages, because you rely on that information when creating release branches, cherry-picking fixes, etc. Would you be confident deploying the release branch with an &amp;ldquo;important fix&amp;rdquo; commit without any more details?&lt;/p&gt;
-
-&lt;p&gt;Of course good commit messages is only one thing that helps with maintenance of a big project and a big team. There are other factors as keeping feature branches up to date using rebase, keeping a clean history by squashing minor commits, or splitting huge changes into multiple independent commits. More on that on this blog soon!&lt;/p&gt;
 </description>
     </item>
     

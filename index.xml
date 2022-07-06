@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Monkey Patching</title>
-    <link>http://www.monkeypatching.com/</link>
+    <link>https://www.monkeypatching.com/</link>
     <description>Recent content on Monkey Patching</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Jul 2016 20:16:14 +0200</lastBuildDate>
-    <atom:link href="http://www.monkeypatching.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.monkeypatching.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Auto Deploy Hugo to Github Pages</title>
-      <link>http://www.monkeypatching.com/post/auto-deploy-hugo-to-github-pages/</link>
+      <link>https://www.monkeypatching.com/post/auto-deploy-hugo-to-github-pages/</link>
       <pubDate>Mon, 25 Jul 2016 20:16:14 +0200</pubDate>
       
-      <guid>http://www.monkeypatching.com/post/auto-deploy-hugo-to-github-pages/</guid>
+      <guid>https://www.monkeypatching.com/post/auto-deploy-hugo-to-github-pages/</guid>
       <description>&lt;p&gt;Want to know how to create a static website using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and deploy it automatically using &lt;a href=&#34;https://circleci.com/&#34;&gt;CircleCI&lt;/a&gt; to &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;? Everything free of charge? Read on!&lt;/p&gt;
 
 &lt;p&gt;This post covers exactly the same setup I&amp;rsquo;m using for this blog, so if TL;DR and you know your way around Hugo, you can jump directly to my &lt;a href=&#34;https://github.com/viru/monkeypatching.com&#34;&gt;repository&lt;/a&gt;.&lt;/p&gt;
@@ -54,10 +54,10 @@ $ hugo -v
     
     <item>
       <title>Git Messages Again</title>
-      <link>http://www.monkeypatching.com/post/git-messages-again/</link>
+      <link>https://www.monkeypatching.com/post/git-messages-again/</link>
       <pubDate>Sat, 16 Jul 2016 13:54:27 +0200</pubDate>
       
-      <guid>http://www.monkeypatching.com/post/git-messages-again/</guid>
+      <guid>https://www.monkeypatching.com/post/git-messages-again/</guid>
       <description>&lt;p&gt;When started this blog I was wondering what should be in the first post? Then I thought: what is a typical commit message of the first commit in a new repository? 90% of the times it says &amp;ldquo;Initial commit&amp;rdquo;. Well, starting a blog with &amp;ldquo;Initial Post&amp;rdquo; would be silly, so let&amp;rsquo;s talk about commit messages instead! What&amp;rsquo;s more, let&amp;rsquo;s talk about later commits, because the first one usually doesn&amp;rsquo;t really matter.&lt;/p&gt;
 
 &lt;p&gt;There are plenty of &lt;a href=&#34;http://chris.beams.io/posts/git-commit/&#34;&gt;good blog posts&lt;/a&gt; &lt;a href=&#34;http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html&#34;&gt;about writing good commit messages&lt;/a&gt; already. I&amp;rsquo;ll just recap in short (but if it&amp;rsquo;s new to you, please check out the posts I&amp;rsquo;ve linked):&lt;/p&gt;
